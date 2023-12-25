@@ -275,30 +275,12 @@ services:
 | `ALL_PROXY`   | 可选 | 所有代理 代理，支持 http，https, socks5    |
 
 > 注意: `Railway` 修改环境变量会重新 `Deploy`
-> ### Deploy with Sealos
 
-[![](https://raw.githubusercontent.com/labring-actions/templates/main/Deploy-on-Sealos.svg)](https://cloud.sealos.io/?openapp=system-fastdeploy%3FtemplateName%3Dchatgpt-web)
+### Deploy with Sealos
+
+[![](https://raw.githubusercontent.com/labring-actions/templates/main/Deploy-on-Sealos.svg)](https://cloud.sealos.io/?openapp=system-fastdeploy%3FtemplateName%3DAI-Chat)
 
 > Environment variables are consistent with Docker environment variables
-
-### Package Manually
-#### Backend Service
-> If you don't need the `node` interface of this project, you can omit the following operations
-
-Copy the `service` folder to the server where you have the `node` service environment.
-
-```shell
-# Install
-pnpm install
-
-# Pack
-pnpm build
-
-# Run
-pnpm prod
-```
-
-PS: It is also okay to run `pnpm start` directly on the server without packing
 
 ### 手动打包
 #### 后端服务
