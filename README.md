@@ -300,35 +300,6 @@ pnpm prod
 
 PS: It is also okay to run `pnpm start` directly on the server without packing
 
-#### Frontend Webpage
-
-1. Modify the `VITE_GLOB_API_URL` field in the `.env` file at the root directory to your actual backend interface address
-
-2. Run the following commands at the root directory, then copy the files in the `dist` folder to the root directory of your website service
-
-[Reference](https://cn.vitejs.dev/guide/static -deploy.html#building-the-app)
-
-```shell
-pnpm build
-```
-
-## FAQ
-Q: Why does `Git` commit always report errors?
-
-A: Because there is a commit message verification, please follow the [Commit Guide](./CONTRIBUTING.md)
-
-Q: Where to change the request interface if only the front-end page is used?
-
-A: The `VITE_GLOB_API_URL` field in the `.env` file at the root directory.
-
-Q: All files explode red when saving?
-
-A: `vscode` please install the recommended plug-ins for the project, or manually install the `Eslint` plug-in.
-
-Q: No typewriter effect on the front end?
-
-A: One possible reason is that after Nginx reverse proxy, buffer is turned on, then Nginx will try to buffer some data from the backend before sending it to the browser. Please try adding `proxy_buffering off; ` after the reverse proxy parameter, then reload Nginx. Other web server configurations are similar.
-
 ### 手动打包
 #### 后端服务
 > 如果你不需要本项目的 `node` 接口，可以省略如下操作
